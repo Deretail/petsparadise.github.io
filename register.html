@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="External_Font.css">
+    <title>Pet's Paradise</title>
+    <style>
+        .item-H{grid-area:header;
+                height: auto;
+                position: sticky;
+                top: 0px;}
+        .item-L{grid-area: lside;
+                height: 500px;
+                text-align: left;
+                }
+        .item-M{grid-area: main;
+                height: 500px;
+                overflow: auto;
+                scrollbar-color: #FFBEE0;
+                }
+        .item-F{grid-area: footer;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+        }
+        .gridcontainer{
+            display: grid;
+            grid-template-areas:
+            'header header header header header'
+            'lside main main main main'
+            'footer footer footer footer footer';
+            grid-gap:5px;
+            padding:10px;
+            }
+        .item{
+              background-color: #FFBEE0;
+              padding:30px; 
+              font-size: 20px;
+              }
+        .item-F img{
+                width: 100%;
+            }
+            .item-F .text{
+                position: absolute;
+                color: black;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-top: 10px;
+            }
+            .button {
+                display: inline-block;
+                padding: 15px 25px;
+                font-size: 24px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: #CE6E85;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+
+            .button:hover{background-color: #F1EFD8}
+            .button:active {
+                background-color: #F1EFD8;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <div class="item-H">
+            <bg-image><img src="images/Header_BG.jpg" alt="background" style="max-width: 1315px; height: auto;"></bg-image>
+        </div>
+
+        <div class="item-L item">
+            <button class="button" style="vertical-align: middle;"><a href="index.html" style="color: #fff;">Homepage</a></button>
+        </div>
+        <div class="item-M item">
+            <div class="container">
+                <fieldset>
+                <b><header style="text-align: center;">สมัครสมาชิก</header></b>
+                <form action="https://httpbin.org/post" method="post">
+                    <label for="Firstname" style="padding: 5px; margin: 5px 35px 5px 5px;">ชื่อ</label><br>
+                    <input type="text" id="Firstname" name="user_name" style="margin: 15px 5px 5px 11px; padding: 5px;"><br>
+                    <label for="Lastname" style="padding: 5px; margin: 5px;">นามสกุล</label><br>
+                    <input type="text" id="Lastname" name="sur_name" style="margin: 15px 5px 5px 11px; padding: 5px;"><br>
+                    <label for="email" style="padding: 5px; margin: 5px;">อีเมล</label><br>
+                    <input type="email" id="email" name="email_address" style="margin: 15px 5px 5px 11px; padding: 5px;"><br>
+                    <label for="Telnumber" style="padding: 5px; margin: 5px;">เบอร์โทร</label><br>
+                    <input type="tel" id="Telnumber" name="Tel_number" style="margin: 15px 5px 5px 11px; padding: 5px;"><br>
+                    <label for="birthday">วัน เดือน ปีเกิด</label><br>
+                    <input type="date" id="birthday" name="birthday" style="margin: 15px 5px 5px 11px; padding: 5px;"><br>
+                    <label for="gender">เพศ</label><br>
+                    <input type="radio" id="male" name="male" value="male">
+                    <label for="male">ชาย</label>
+                    <input type="radio" id="female" name="female" value="female">
+                    <label for="female">หญิง</label>
+                    <input type="radio" id="other" name="other" value="Not prefer to say">
+                    <label for="other">ไม่ต้องการระบุ</label><br><br>
+                    <b><label>ที่อยู่สำหรับจัดส่งสินค้า</label><br></b>
+                    <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+                    <input type="submit" value="submit">
+                </fieldset>
+                </form>
+            </div>
+            </section>
+        </div>
+        <div class="item-F">
+            <bg-image><img src="images/Footer_BG.jpg" alt="Footer background" style="max-width: 1315px; height: auto;"></bg-image>
+            <div class="text"><address style="text-align: center;">
+                99/9 หมู่ 18 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120<br>
+                &#128382;&nbspโทร.010-110-111<br>
+            </address></div>
+        </div>
+    </div>
+</body>
+</html>
