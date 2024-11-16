@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="External_Font.css">
+    <title>Pet's Paradise</title>
+    <style>
+        .item-H{grid-area:header;
+                height: auto;
+                position: sticky;
+                top: 0px;}
+        .item-L{grid-area: lside;
+                height: 500px;
+                text-align: left;
+                }
+        .item-M{grid-area: main;
+                height: 500px;
+                overflow: auto;
+                scrollbar-color: #FFBEE0;
+                }
+        .item-F{grid-area: footer;
+                height: 50px;
+                position: absolute;
+                bottom: 0;
+                }
+        .gridcontainer{
+            display: grid;
+            grid-template-areas:
+            'header header header header header'
+            'lside main main main main'
+            'footer footer footer footer footer';
+            grid-gap:5px;
+            padding:10px;
+            }
+        .item{
+              background-color: #FFBEE0;
+              padding:30px; 
+              font-size: 20px;
+              }
+        .item-F img{
+                width: 100%;
+            }
+            .item-F .text{
+                position: absolute;
+                color: black;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin-top: 10px;
+            }
+            .button {
+                display: inline-block;
+                padding: 15px 25px;
+                font-size: 24px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: #CE6E85;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+
+            .button:hover{background-color: #F1EFD8}
+            .button:active {
+                background-color: #F1EFD8;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <div class="item-H">
+            <bg-image><img src="images/Header_BG.jpg" alt="background" style="max-width: 1315px; height: auto;"></bg-image>
+        </div>
+
+        <div class="item-L item">
+            <button class="button" style="vertical-align: middle;"><a href="register.html" style="color: #fff;">Register now!</a></button>
+        </div>
+
+        <div class="item-M item">
+            <h2 style="background-color: white;border-style: outset; border-radius:  50px; text-align: center;">รายการสินค้า</h2><br>
+            <form action="https://httpbin.org/post" method="post">
+            <fieldset class="fieldset">
+            <h3>อาหารและขนมสัตว์เลี้ยง</h3><br>
+            <div class="container_p">
+                <div class="products_con">
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product1.webp" alt="Dog food" style="align-items: center;">
+                        </div>
+                        <div class="products_detail">
+                            Hill’s อาหารเม็ด สำหรับสุนัขสูงอายุ 7 ปีขึ้นไป 5.67 kg
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿2,400</div>
+                            <div class="products_right">
+                                <label for="Hill">จำนวน</label>
+                                <select id="Hill" name="Hills_6kg">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product2.webp" alt="Cat food">
+                        </div>
+                        <div class="products_detail">
+                            Royal Canin อาหารเม็ดสำหรับแมวโต อายุ 1 ปีขึ้นไป 4 kg
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿1,460</div>
+                            <div class="products_right">
+                                <label for="Royal">จำนวน</label>
+                                <select id="Royal" name="Royal_4kg">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product3.webp" alt="Dog food">
+                        </div>
+                        <div class="products_detail">
+                            Pedigree เดนต้าสติก สำหรับสุนัขพันธุ์เล็ก 210 g
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿126</div>
+                            <div class="products_right">
+                                <label for="Pedigree">จำนวน</label>
+                                <select id="Pedigree" name="Pedigree_210g">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product4.webp" alt="Cat food">
+                        </div>
+                        <div class="products_detail">
+                            Nekko อาหารเปียก สำหรับแมว รสปลาทูน่ามูสผสมแซลมอน 70 g 12 ชิ้น
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿240</div>
+                            <div class="products_right">
+                                <label for="Nekko">จำนวน</label>
+                                <select id="Nekko" name="Nekko_12">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product5.webp" alt="Dog snack">
+                        </div>
+                        <div class="products_detail">
+                            Sierrio แท่งเปีย ขนมขัดฟันสุนัข กลิ่นไก่
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿129</div>
+                            <div class="products_right">
+                                <label for="Sierrio">จำนวน</label>
+                                <select id="Sierrio" name="Sierrio">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product6.webp" alt="Cat snack">
+                        </div>
+                        <div class="products_detail">
+                            Me-O ครีมมี่ทรีตขนมแมวเลีย รสไก่และตับ 15 g 20 ชิ้น
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿225</div>
+                            <div class="products_right">
+                                <label for="Meo">จำนวน</label>
+                                <select id="Meo" name="Meo_20">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <h3>ของเล่นและอุปกรณ์เสริม</h3><br>
+            <div class="container_p">
+                <div class="products_con">
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product7.webp" alt="Dog toy" style="align-items: center;">
+                        </div>
+                        <div class="products_detail">
+                            Zippypaws ของเล่นซ่อนหาสำหรับสุนัข รูปไข่อีสเตอร์และผองเพื่อน
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿950</div>
+                            <div class="products_right">
+                                <label for="Zippypaws">จำนวน</label>
+                                <select id="Zippypaws" name="Zippypaws">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product8.webp" alt="Dog toy">
+                        </div>
+                        <div class="products_detail">
+                            Chuckit! Kick Fetch ลูกบอลสำหรับสุนัข ไซส์ S
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿1,060</div>
+                            <div class="products_right">
+                                <label for="Chuckit">จำนวน</label>
+                                <select id="Chuckit" name="Chuckit">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product9.webp" alt="Cat toy">
+                        </div>
+                        <div class="products_detail">
+                            PetzRoute ของเล่นแมว คล้ายปีกแมลง มีริบบิ้น 
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿190</div>
+                            <div class="products_right">
+                                <label for="PetzRoute">จำนวน</label>
+                                <select id="PetzRoute" name="PetzRoute">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product10.webp" alt="Dog gadget">
+                        </div>
+                        <div class="products_detail">
+                            Cc Pet ปัตตาเลี่ยนไฟฟ้า สำหรับลูกสุนัข 
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿690</div>
+                            <div class="products_right">
+                                <label for="Ccpet">จำนวน</label>
+                                <select id="Ccpet" name="Ccpet">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product11.webp" alt="Cat gadget">
+                        </div>
+                        <div class="products_detail">
+                            Petkit น้ำพุแมวอัตโนมัติ รุ่น Eversweet 3 Pro UVC
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿2,190</div>
+                            <div class="products_right">
+                                <label for="Petkit">จำนวน</label>
+                                <select id="Petkit" name="Petkit">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product12.webp" alt="Cat condo">
+                        </div>
+                        <div class="products_detail">
+                            Kanimal แคนนิมอล คอนโดแมว รุ่น 5 ชั้น
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿3,990</div>
+                            <div class="products_right">
+                                <label for="Kanimal">จำนวน</label>
+                                <select id="Kanimal" name="Kanimal">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <h3>ผลิตภัณฑ์เพื่อสุขภาพและความงาม</h3><br>
+            <div class="container_p">
+                <div class="products_con">
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product13.webp" alt="Dog shampoo">
+                        </div>
+                        <div class="products_detail">
+                            Bubble Bear แชมพูสำหรับสุนัข สูตรพรีเมียมมายด์ 500 ml
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿380</div>
+                            <div class="products_right">
+                                <label for="Bubblebear">จำนวน</label>
+                                <select id="Bubblebear" name="Bubblebear">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product14.webp" alt="Dog comb">
+                        </div>
+                        <div class="products_detail">
+                            Sleeky สลิคกี้ หวี สำหรับสุนัข แบบใช้จับหมัด
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿160</div>
+                            <div class="products_right">
+                                <label for="Sleeky">จำนวน</label>
+                                <select id="Sleeky" name="Sleeky">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product15.webp" alt="Cat shampoo">
+                        </div>
+                        <div class="products_detail">
+                            Bioline แชมพูอาบน้ำ สูตรอ่อนโยน สำหรับแมว 1 L
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿330</div>
+                            <div class="products_right">
+                                <label for="Bioline">จำนวน</label>
+                                <select id="Bioline" name="Bioline">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product16.webp" alt="Cat ear gel">
+                        </div>
+                        <div class="products_detail">
+                            Bearing เจลเช็ดหูทีทรีออยล์ สำหรับแมว 100 ml
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿99</div>
+                            <div class="products_right">
+                                <label for="Bearing">จำนวน</label>
+                                <select id="Bearing" name="Bearing">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product17.webp" alt="Dog DR.Choice">
+                        </div>
+                        <div class="products_detail">
+                            Dr.Choice แผ่นรองซับเจลมาตรฐานญี่ปุ่น สำหรับสุนัข M, 50 แผ่น
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿540</div>
+                            <div class="products_right">
+                                <label for="Drchoice">จำนวน</label>
+                                <select id="Drchoice" name="Drchoice">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_item">
+                        <div class="products_img">
+                            <img src="images/product18.webp" alt="Cat spray">
+                        </div>
+                        <div class="products_detail">
+                            Urine Off สเปรย์กำจัดกลิ่นและคราบปัสสาวะสำหรับแมว 16.9oz
+                        </div>
+                        <div class="products_price">
+                            <div class="products_left">฿590</div>
+                            <div class="products_right">
+                                <label for="Urineoff">จำนวน</label>
+                                <select id="Urineoff" name="Urineoff">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="input" value="&#128230; ยืนยันการสั่งสินค้า" style="margin: 5px; padding: 5px;">
+            </fieldset>
+            </form>
+        </div>
+        <div class="item-F">
+            <bg-image><img src="images/Footer_BG.jpg" alt="Footer background" style="max-width: 1315px; height: auto;"></bg-image>
+            <div class="text"><address style="text-align: center;">
+                99/9 หมู่ 18 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120<br>
+                &#128382;&nbspโทร.010-110-111<br>
+            </address></div>
+        </div>
+    </div>
+</body>
+</html>
